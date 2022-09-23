@@ -11,7 +11,6 @@
 
 .header {
   height: 100vh;
-  width: 100vw;
   min-height: 600px;
   max-height: 756px;
   display: flex;
@@ -55,6 +54,7 @@
   line-height: 25px;
   font-size: 18px;
   font-style: normal;
+  font-weight: normal;
 }
 
 .header__link {
@@ -132,7 +132,7 @@
   font-style: normal;
 }
 
-li:not(:last-child) {
+.two-columns__paragraph:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -145,7 +145,6 @@ li:not(:last-child) {
 }
 
 .digits {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,11 +187,12 @@ li:not(:last-child) {
   width: 250px;
   padding: 0;
   margin: 60px 0 0;
+  list-style: none;
 }
 
 .table__heading {
   padding: 0;
-  margin: 0 0 20px;
+  margin: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
@@ -200,19 +200,18 @@ li:not(:last-child) {
 
 .table__text {
   padding: 0;
-  margin: 0;
+  margin: 20px 0 20px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
 
-.table__text_bank {
-  margin: 20px 0 0 0;
+.table__text:last-child {
+  margin-bottom: 0;
 }
 
 .feynman { 
   height: 890px;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -231,6 +230,7 @@ li:not(:last-child) {
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
+  text-align: center;
 }
 
 .feynman__subtitle {
@@ -266,7 +266,6 @@ li:not(:last-child) {
 }
 
 .kaufman {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -353,13 +352,15 @@ li:not(:last-child) {
   background-color: #1f1f1f;
   min-height: 350px;
   box-sizing: border-box;
-  width: 100vw;
   margin: 0;
   padding: 60px 0 40px;
+  color: white;
 }
 
 .footer__columns {
   width: 90%;
+  min-height: 250px;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
   display: flex;
@@ -383,7 +384,6 @@ li:not(:last-child) {
 }
 
 .footer__author { 
-  color: white;
   margin: 18px 0;
   padding: 0;
   line-height: 25px;
@@ -399,7 +399,6 @@ li:not(:last-child) {
 .footer__column_content_heading {
   margin: 0%;
   padding: 0;
-  color: white;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
