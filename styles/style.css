@@ -1,3 +1,16 @@
+@keyframes rotation {
+  from {
+       transform: rotate(0deg);
+   }
+   to {
+       transform: rotate(360deg);
+   }
+  }
+
+  /** {
+    border: 1px solid red;
+  }
+  */
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -20,6 +33,7 @@
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .logo {
@@ -65,6 +79,11 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
+}
+
+.header__link:hover {
+  opacity: .4;
+  transition: opacity 1s linear;
 }
 
 .header__main-illustration {
@@ -139,12 +158,90 @@
   margin-bottom: 30px;
 }
 
-.two-columns__span-accent { 
+.two-columns__span-accent {
   padding: 0;
   margin: 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: 600;
+}
+
+.techniques {
+  width: 80%;
+  margin: 0 auto;
+  padding: 100px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.cards {
+  min-width: 920px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 100px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  padding: 0;
+  width: 240px;
+  text-align: center;
+}
+
+.cards__item:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  margin: 60px 40px 43px;
+  border-radius: 50%;
+}
+
+.cards__description {
+  margin: 16px 0 0;
+  padding: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.video {
+  padding: 100px 0 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.video__iframes {
+  margin: 50px auto auto;
+  padding: 0;
+  display: flex;
+}
+
+.video__iframe {
+  width: 515px;
+  height: 316px;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.video__iframe:not(:last-child) {
+  margin-right: 20px;
+}
+
+.oakley {
+  background-color: #f2f2f2;
+  margin: -60px 0 0;
+  padding: 160px 0 0;
 }
 
 .digits {
@@ -215,7 +312,89 @@
   margin-bottom: 0;
 }
 
-.feynman { 
+.khan {
+  margin: 0;
+  background-color: #f2f2f2;
+  padding: 105px 0 0;
+}
+
+.khan__container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.khan__author {
+  margin: 0;
+  padding: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.khan__title {
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.khan__quote {
+  margin: 50px 0 36px;
+  padding: 0;
+  width: 790px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__quote-author {
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.quote-author-subline {
+  margin: 10px 0 68px;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__book-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.khan__book-pic {
+  height: 620px;
+  width: 608px;
+  margin-right: 48px;
+  padding: 0;
+  object-fit: cover;
+  object-position: top;
+}
+
+.khan__buy-link {
+  color: #2f80ed;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.khan__buy-link:hover {
+  opacity: .4;
+  transition: opacity 1s linear;
+}
+
+.feynman {
   min-height: 890px;
   display: flex;
   flex-direction: column;
@@ -223,7 +402,7 @@
   position: relative;
   background-color: #f2f2f2;
   background-repeat: no-repeat;
-  margin: 100px 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -259,6 +438,11 @@
   font-weight: normal;
   color: #2f80ed;
   text-decoration: none;
+}
+
+.feynman__link:hover {
+  opacity: .4;
+  transition: opacity 1s linear;
 }
 
 .feynman__image {
@@ -318,6 +502,41 @@
   top: 0;
 }
 
+.resources {
+  margin: 0;
+  padding: 100px 0 217px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.resources__logo-zone {
+  margin: 80px auto 0;
+  padding: 0;
+  width: 1100px;
+  display: flex;
+}
+
+.resources__link {
+  width: 270px;
+  height: 38px;
+  margin: 0;
+  padding: 0;
+}
+
+.resources__logo:hover {
+    opacity: .4;
+    transition: opacity 1s linear;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+  margin: 0;
+  padding: 0;
+}
+
 .footer {
   background-color: #1f1f1f;
   min-height: 350px;
@@ -354,7 +573,7 @@
   margin-left: 0;
 }
 
-.footer__author { 
+.footer__author {
   margin: 18px 0;
   padding: 0;
   line-height: 25px;
@@ -385,6 +604,11 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
+}
+
+.footer__column-link:hover {
+  opacity: .4;
+  transition: opacity 1s linear;
 }
 
 .footer__social-icon {
